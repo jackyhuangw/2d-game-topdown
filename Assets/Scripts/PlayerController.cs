@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private float moveSpeed;
@@ -9,7 +10,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        } else {
+            Instance = this;
+        }
     }
     void Update()
     {
