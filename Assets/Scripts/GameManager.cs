@@ -55,4 +55,14 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
