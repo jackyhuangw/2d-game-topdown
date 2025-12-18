@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerHealth = playerMaxHealth;
+        UIController.Instance.UpdateHealthSlider();
     }
     void Update()
     {
@@ -53,9 +54,11 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         playerHealth -= damage;
+        UIController.Instance.UpdateHealthSlider();
         if (playerHealth <= 0)
         {
             gameObject.SetActive(false);
+            GameManager.Instance.GameOver();
         }
     }
 }
