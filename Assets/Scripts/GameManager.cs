@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +20,17 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        StartCoroutine(ShowGameOverScreen());
+    }
+
+    IEnumerator ShowGameOverScreen()
+    {
+        yield return new WaitForSeconds(1.5f);
         UIController.Instance.gameOverPanel.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
