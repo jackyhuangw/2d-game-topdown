@@ -18,6 +18,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            Pause();
+        }
+    }
+
     public void GameOver()
     {
         StartCoroutine(ShowGameOverScreen());
@@ -32,5 +40,19 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void Pause()
+    {
+        if (UIController.Instance.pausePanel.activeSelf == false && UIController.Instance.gameOverPanel.activeSelf == false)
+        {
+            UIController.Instance.pausePanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            UIController.Instance.pausePanel.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 }
