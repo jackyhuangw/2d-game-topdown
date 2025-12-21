@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1805198044280303486}
   m_Layer: 7
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   rb: {fileID: 8228698840224335535}
   moveSpeed: 1
   damage: 1
+  health: 50
   destroyEffect: {fileID: 1185597263163949173, guid: 9d70f46350b6143519bcb61d6b7cacec, type: 3}
 --- !u!50 &8228698840224335535
 Rigidbody2D:
