@@ -9775,12 +9775,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791abc64610ad45d190bdd87123e5a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  weaponLevel: 3
+  stats:
+  - cooldown: 5
+    duration: 3
+    damage: 1
+    range: 0.7
+    speed: 0.5
+  - cooldown: 5
+    duration: 3
+    damage: 2
+    range: 1.2
+    speed: 0.5
+  - cooldown: 5
+    duration: 3
+    damage: 3
+    range: 2
+    speed: 0.5
   prefab: {fileID: 8142641348832075449, guid: 2ff792d92524048788c6536e6e54db5b, type: 3}
-  cooldown: 5
-  duration: 3
-  damage: 5
-  range: 0.9
-  speed: 0.3
 --- !u!1 &1716108736
 GameObject:
   m_ObjectHideFlags: 0
