@@ -46,6 +46,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        DamageNumberController.Instance.CreateNumber(damage, transform.position);
         if (health <= 0)
         {
             Destroy(gameObject);
