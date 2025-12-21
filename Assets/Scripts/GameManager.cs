@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public float gameTime;
+    public bool isGameActive;
 
     void Awake()
     {
@@ -18,16 +20,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        isGameActive = true;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        if (isGameActive)
         {
+            gameTime += Time.deltaTime;
+            UIController.Instance.UpdateTimer(gameTime);
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+            {
             Pause();
+            }  
         }
     }
 
     public void GameOver()
     {
+        isGameActive = false;
         StartCoroutine(ShowGameOverScreen());
     }
 
