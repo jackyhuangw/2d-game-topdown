@@ -4718,17 +4718,17 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 4847083278529579098, guid: 1f341c56cbbe546e882bf66a68f915d9, type: 3}
     spawnTimer: 0
     spawnInterval: 1
-    enemiesPerWave: 10
+    enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 6940460411025938671, guid: b4686ad44ea6948428b2658de1de4637, type: 3}
     spawnTimer: 0
     spawnInterval: 1
-    enemiesPerWave: 10
+    enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 5926817866647313164, guid: f7f11ab15b2764864b9da26fc26a5150, type: 3}
     spawnTimer: 0
     spawnInterval: 1
-    enemiesPerWave: 10
+    enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 1265467019093126831, guid: 59f721908aa254b4d8bf08b4b749fddd, type: 3}
     spawnTimer: 0
@@ -10069,22 +10069,70 @@ MonoBehaviour:
   stats:
   - cooldown: 5
     duration: 3
-    damage: 3
+    damage: 1
     range: 0.7
     speed: 0.5
     description: Damage +1
   - cooldown: 5
     duration: 3
     damage: 2
-    range: 1.2
+    range: 0.7
     speed: 0.5
-    description: Range +0.5
+    description: Increase Range
+  - cooldown: 5
+    duration: 3
+    damage: 2
+    range: 1
+    speed: 0.5
+    description: Faster Damage
+  - cooldown: 5
+    duration: 3
+    damage: 2
+    range: 1
+    speed: 0.4
+    description: Increase Range
+  - cooldown: 5
+    duration: 3
+    damage: 2
+    range: 1.2
+    speed: 0.4
+    description: Damage +1
   - cooldown: 5
     duration: 3
     damage: 3
-    range: 2
-    speed: 0.5
-    description: Range +0.8
+    range: 1.2
+    speed: 0.4
+    description: Reduce Cooldown
+  - cooldown: 4
+    duration: 3
+    damage: 3
+    range: 1.2
+    speed: 0.4
+    description: Increase Range
+  - cooldown: 4
+    duration: 3
+    damage: 3
+    range: 1.4
+    speed: 0.4
+    description: Faster Damage
+  - cooldown: 4
+    duration: 3
+    damage: 3
+    range: 1.4
+    speed: 0.3
+    description: Increase Range
+  - cooldown: 4
+    duration: 3
+    damage: 3
+    range: 1.4
+    speed: 0.3
+    description: Increase Range
+  - cooldown: 4
+    duration: 3
+    damage: 3
+    range: 1.4
+    speed: 0.4
+    description: Increase Range
   weaponImage: {fileID: 2781533676904308770, guid: 45906d5ae3dce4ea6a3bc0b09e59637b, type: 3}
   prefab: {fileID: 8142641348832075449, guid: 2ff792d92524048788c6536e6e54db5b, type: 3}
 --- !u!1 &1716108736
