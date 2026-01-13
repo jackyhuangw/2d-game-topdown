@@ -1,6 +1,11 @@
 using UnityEngine;
 
-
+[System.Serializable]
+public class LootEntry
+{
+    public GameObject prefab;
+    [Range(0f, 1f)] public float dropChance;
+}
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -13,6 +18,9 @@ public class Enemy : MonoBehaviour
     private float pushCounter;
     [SerializeField] private GameObject destroyEffect;
     private Vector3 direction;
+
+    [Header("Loot Table")]
+    [SerializeField] private LootEntry[] lootTable;
     void FixedUpdate()
     {
         if (PlayerController.Instance.gameObject.activeSelf)
@@ -66,12 +74,31 @@ public class Enemy : MonoBehaviour
         pushCounter = pushTime;
         if (health <= 0)
         {
-            Destroy(gameObject);
-            Instantiate(destroyEffect, transform.position, transform.rotation);
-            PlayerController.Instance.GetExperience(experienceToGive);
-            AudioController.Instance.PlayModifiedSound(AudioController.Instance.enemyDie);
+            Die();
         }
     }
 
+    void Die()
+    {
+        DropLoot();
 
+        Instantiate(destroyEffect, transform.position, transform.rotation);
+        PlayerController.Instance.GetExperience(experienceToGive);
+        AudioController.Instance.PlayModifiedSound(AudioController.Instance.enemyDie);
+
+        Destroy(gameObject);
+    }
+
+    void DropLoot()
+    {
+        foreach (var entry in lootTable)
+        {
+            if (entry.prefab == null) continue;
+
+            if (Random.value <= entry.dropChance)
+            {
+                Instantiate(entry.prefab, transform.position, Quaternion.identity);
+            }
+        }
+    }
 }
