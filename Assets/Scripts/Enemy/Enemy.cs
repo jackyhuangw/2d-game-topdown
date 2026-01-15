@@ -21,6 +21,9 @@ public class Enemy : MonoBehaviour
 
     [Header("Loot Table")]
     [SerializeField] private LootEntry[] lootTable;
+
+    [Header("XP Drop")]
+    [SerializeField] private GameObject xpOrbPrefab; // prefab orb exp
     void FixedUpdate()
     {
         if (PlayerController.Instance.gameObject.activeSelf)
@@ -81,9 +84,10 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         DropLoot();
+        DropExperience();
 
         Instantiate(destroyEffect, transform.position, transform.rotation);
-        PlayerController.Instance.GetExperience(experienceToGive);
+        // PlayerController.Instance.GetExperience(experienceToGive);
         AudioController.Instance.PlayModifiedSound(AudioController.Instance.enemyDie);
 
         Destroy(gameObject);
@@ -100,5 +104,13 @@ public class Enemy : MonoBehaviour
                 Instantiate(entry.prefab, transform.position, Quaternion.identity);
             }
         }
+    }
+
+    void DropExperience()
+    {
+        if (xpOrbPrefab == null) return;
+
+        // spawn satu orb di posisi enemy
+        Instantiate(xpOrbPrefab, transform.position, Quaternion.identity);
     }
 }

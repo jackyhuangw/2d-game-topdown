@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3410088288408392607}
   - component: {fileID: 8277103049081914718}
   - component: {fileID: -8282003488120478679}
-  - component: {fileID: -5493817094163039250}
+  - component: {fileID: 7453556260808898435}
   m_Layer: 6
-  m_Name: Drop1
+  m_Name: ExperienceGem
   m_TagString: Lootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7, y: -1.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.024333954, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f31ac21b9dc4b2e9eb020e4a26c262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
---- !u!114 &-5493817094163039250
+--- !u!114 &7453556260808898435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4847717059372741923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dfdff1598b2450f95da18eef248ec5, type: 3}
+  m_Script: {fileID: 11500000, guid: 227dbccdadbc24648bc147dba5eedbb0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealEffect
-  healAmount: 1
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceEffect
+  experienceAmount: 1

@@ -111,4 +111,10 @@ public class PlayerController : MonoBehaviour
         UIController.Instance.levelUpButtons[0].ActivateButton(activeWeapon);
         UIController.Instance.LevelUpPanelOpen();
     }
+
+    public Vector2 GetMoveInput()
+{
+    // arah gerak terakhir (sudah dinormalize di Update)
+    return new Vector2(playerMoveDirection.x, playerMoveDirection.y);
+}
 }
