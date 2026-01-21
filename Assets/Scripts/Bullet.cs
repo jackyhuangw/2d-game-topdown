@@ -18,12 +18,15 @@ public class Bullet : MonoBehaviour
     {
         if (direction.sqrMagnitude < 0.01f)
         {
-            // kalau player diam, default tembak ke kanan
-            direction = Vector2.right;
+            direction = Vector2.down;
         }
 
         moveDirection = direction.normalized;
+
+        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
+
 
     private void OnEnable()
     {
