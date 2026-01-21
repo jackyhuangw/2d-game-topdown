@@ -19,11 +19,28 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject destroyEffect;
     private Vector3 direction;
 
+    [SerializeField] private float lifeTime = 45f;
+    private float lifeTimer;
+
     [Header("Loot Table")]
     [SerializeField] private LootEntry[] lootTable;
 
     [Header("XP Drop")]
     [SerializeField] private GameObject xpOrbPrefab; // prefab orb exp
+
+        void Start()
+    {
+        lifeTimer = lifeTime;
+    }
+
+    void Update()
+    {
+        lifeTimer -= Time.deltaTime;
+        if (lifeTimer <= 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
     void FixedUpdate()
     {
         if (PlayerController.Instance.gameObject.activeSelf)
@@ -101,7 +118,14 @@ public class Enemy : MonoBehaviour
 
             if (Random.value <= entry.dropChance)
             {
-                Instantiate(entry.prefab, transform.position, Quaternion.identity);
+                // Random offset kecil agar loot tersebar
+                Vector2 randomOffset = new Vector2(
+                    Random.Range(-0.5f, 0.5f),  // X: -0.5 sampai +0.5 unit
+                    Random.Range(0.2f, 0.8f)   // Y: agak ke atas agar tidak tumpuk
+                );
+                
+                Vector3 spawnPos = transform.position + (Vector3)randomOffset;
+                Instantiate(entry.prefab, spawnPos, Quaternion.identity);
             }
         }
     }
@@ -110,7 +134,14 @@ public class Enemy : MonoBehaviour
     {
         if (xpOrbPrefab == null) return;
 
-        // spawn satu orb di posisi enemy
-        Instantiate(xpOrbPrefab, transform.position, Quaternion.identity);
+        // Offset khusus untuk XP orb (misal agak ke bawah atau samping)
+        Vector2 xpOffset = new Vector2(
+            Random.Range(-0.3f, 0.3f),  // X: sedikit random
+            Random.Range(-0.4f, 0f)     // Y: agak ke bawah agar beda dari loot
+        );
+        
+        Vector3 spawnPos = transform.position + (Vector3)xpOffset;
+        Instantiate(xpOrbPrefab, spawnPos, Quaternion.identity);
     }
+
 }
