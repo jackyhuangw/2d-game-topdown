@@ -110,15 +110,15 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8585838393850806049}
   rb: {fileID: 8228698840224335535}
   moveSpeed: 1
-  damage: 1
+  damage: 2
   health: 10
   experienceToGive: 2
   pushTime: 0.5
   destroyEffect: {fileID: 1185597263163949173, guid: 9d70f46350b6143519bcb61d6b7cacec, type: 3}
-  lifeTime: 45
+  lifeTime: 90
   lootTable:
   - prefab: {fileID: 4847717059372741923, guid: a743c93b792eb48c9a8d0974758feae6, type: 3}
-    dropChance: 0.1
+    dropChance: 0.2
   xpOrbPrefab: {fileID: 4847717059372741923, guid: 6f415cf2148ce42cc8c0dbbf578f2975, type: 3}
 --- !u!50 &8228698840224335535
 Rigidbody2D:
