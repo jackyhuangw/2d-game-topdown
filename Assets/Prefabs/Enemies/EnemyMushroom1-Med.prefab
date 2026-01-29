@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1993244699060477947}
   - component: {fileID: 8228698840224335535}
   - component: {fileID: 7910067416611808153}
-  - component: {fileID: 4044636614729062766}
+  - component: {fileID: 7494285711604472576}
   m_Layer: 7
-  m_Name: EnemySlime3
+  m_Name: EnemyMushroom1-Med
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4847083278529579098}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.43, y: -2.81, z: 0}
+  m_LocalPosition: {x: 0.49, y: -2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: -1893440427
   m_SortingLayer: 3
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1304022024, guid: 3da99c3c965b94b91b293a8415595259, type: 3}
+  m_Sprite: {fileID: -4280943606828912433, guid: 2fb0f5041cea64370992044b4549cb74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -109,16 +109,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   spriteRenderer: {fileID: 8585838393850806049}
   rb: {fileID: 8228698840224335535}
-  moveSpeed: 1.1
+  moveSpeed: 1.4
   damage: 2
-  health: 15
+  health: 20
   experienceToGive: 3
   pushTime: 0.5
   destroyEffect: {fileID: 1185597263163949173, guid: 9d70f46350b6143519bcb61d6b7cacec, type: 3}
   lifeTime: 90
   lootTable:
   - prefab: {fileID: 4847717059372741923, guid: a743c93b792eb48c9a8d0974758feae6, type: 3}
-    dropChance: 0.3
+    dropChance: 0.2
   xpOrbPrefab: {fileID: 4847717059372741923, guid: 6f415cf2148ce42cc8c0dbbf578f2975, type: 3}
 --- !u!50 &8228698840224335535
 Rigidbody2D:
@@ -157,7 +157,7 @@ Animator:
   m_GameObject: {fileID: 4847083278529579098}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: da0a5fcf1bcd84df79967cb51b1527ce, type: 2}
+  m_Controller: {fileID: 9100000, guid: 030f99539c8ed4ce9a2ae4c79f3662dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -169,7 +169,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &4044636614729062766
+--- !u!58 &7494285711604472576
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,8 +203,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.28904963}
-  m_Radius: 0.28904963
+  m_Offset: {x: 0, y: 0.29658365}
+  m_Radius: 0.29658365
 --- !u!1 &6612746643072607238
 GameObject:
   m_ObjectHideFlags: 0

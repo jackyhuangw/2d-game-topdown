@@ -132,12 +132,12 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7918077330493412260}
   rb: {fileID: 7709336246355244361}
   moveSpeed: 0.5
-  damage: 4
-  health: 50
+  damage: 5
+  health: 100
   experienceToGive: 20
   pushTime: 0.1
   destroyEffect: {fileID: 1185597263163949173, guid: 9d70f46350b6143519bcb61d6b7cacec, type: 3}
-  lifeTime: 100
+  lifeTime: 200
   lootTable:
   - prefab: {fileID: 4847717059372741923, guid: a743c93b792eb48c9a8d0974758feae6, type: 3}
     dropChance: 1
