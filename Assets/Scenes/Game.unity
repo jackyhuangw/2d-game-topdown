@@ -33758,47 +33758,47 @@ MonoBehaviour:
   waves:
   - enemyPrefab: {fileID: 4847083278529579098, guid: 006fb5386a10e471288646071dfa5d09, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: 007f0b17b79ab430889aac73681b45c3, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: 3f3943e0f6f954b57897ec5e2fa31e97, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: c5f4f8dc370f842bdaf564a5424776c4, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 1265467019093126831, guid: 5f231c918d8e640f0a979779c10507ed, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 1
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: 440cf2dd88ba94e7ca10a3cc68b8a097, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 20
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: 7c61e23c939464254bbfee69672a593b, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 25
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: c95910ecb4e2b479f97f55e524254db4, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 30
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 4847083278529579098, guid: 6eefc8b4f629c4f86b8099e9abe17deb, type: 3}
     spawnTimer: 0
-    spawnInterval: 1
+    spawnInterval: 3
     enemiesPerWave: 35
     spawnedEnemyCount: 0
   - enemyPrefab: {fileID: 1265467019093126831, guid: 5f231c918d8e640f0a979779c10507ed, type: 3}
